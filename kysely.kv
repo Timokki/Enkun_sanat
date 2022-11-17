@@ -1,0 +1,48 @@
+<KyselySivu>:
+  orientation: 'vertical'
+
+  MDBoxLayout:
+    orientation: 'vertical'
+
+    # App Bar
+    MDBoxLayout:
+      padding: "5dp"
+      adaptive_height: True
+
+      MDIconButton:
+        icon: "plus"
+
+      MDLabel:
+        text: "Enksuappi kysely"
+        halign: "center"
+        valign: "center"
+        font_size: 25
+
+      MDIconButton:
+        icon: "facebook-messenger"
+
+    MDLabel:
+      id: pisteet
+      text: "0/3"
+
+    MDLabel:
+      id: kysymys
+      text: "Käännä sana:"
+    
+    MDTextField:
+      id: vastaus
+      hint_text: "Round mode"
+      mode: "round"
+      max_text_length: 15
+      helper_text: "Massage"
+      on_text_validate:
+        root.vastaus_validointi()
+    
+    MDRaisedButton:
+      text: "Takaisin"
+      theme_text_color: "Custom"
+      text_color: "orange"
+      on_press:
+        root.manager.transition.direction = 'left'
+        root.manager.current = 'menu'
+      

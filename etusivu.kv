@@ -1,0 +1,37 @@
+<EtuSivu>:
+  orientation: 'vertical'
+
+  MDBoxLayout:
+    orientation: 'vertical'
+
+    # App Bar
+    MDBoxLayout:
+      padding: "5dp"
+      adaptive_height: True
+
+      MDIconButton:
+        icon: "plus"
+
+      MDLabel:
+        text: "Enksuappi"
+        halign: "center"
+        valign: "center"
+        font_size: 25
+
+      MDIconButton:
+        icon: "facebook-messenger"
+    
+    MDRaisedButton:
+      text: "Lopeta"
+      theme_text_color: "Custom"
+      text_color: "orange"
+      #md_bg_color: "red"
+
+    MDRaisedButton:
+      text: 'Sanasto 1'
+      theme_text_color: "Custom"
+      text_color: "orange"
+      on_press:
+        root.manager.transition.direction = 'right'
+        root.manager.current = 'kysely'
+   
