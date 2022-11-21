@@ -12,5 +12,6 @@ class Sanasto:
       print(sanapari[0], "on suomeksi:", sanapari[1])
 
   def anna_sanaparit(self):
+    """Palauttaa talukon tupleja"""
     return self.sanakirja[:]
   
